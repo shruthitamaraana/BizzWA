@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="3400" viewBox="0 0 1200 3400">
+  <style>
+    .box { fill: #ffffff; stroke: #2b3338; stroke-width: 2; rx: 12; }
+    .title { font: bold 18px sans-serif; fill: #0b1a2b; }
+    .body { font: 14px sans-serif; fill: #1f2933; }
+    .tech { font: 12px monospace; fill: #374151; font-weight: bold; }
+    .badge { font: 11px sans-serif; fill: white; }
+    .arrow { stroke: #0b1a2b; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#0b1a2b" />
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <rect x="40" y="20" width="1120" height="80" class="box" fill="#0b69ff"/>
+  <text x="70" y="70" class="title" fill="#ffffff" style="font-size:26px;">BIZZWA — END-TO-END WHATSAPP AI WORKFLOW</text>
+
+  <!-- 1 Initialization -->
+  <g transform="translate(60,130)">
+    <rect x="0" y="0" width="1080" height="160" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">1. INITIALIZATION (SETUP)</text>
+    <text x="24" y="64" class="body">CREATE ACCOUNTS, CONFIGURE API KEYS AND WEBHOOK URLS, LOCAL TESTING.</text>
+    <text x="24" y="94" class="tech">NODE.JS · FIREBASE · META CLOUD API · NGROK</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#06b6d4"/>
+    <text x="940" y="44" class="badge">ENV</text>
+  </g>
+
+  <!-- 2 Incoming Messages -->
+  <g transform="translate(60,320)">
+    <rect x="0" y="0" width="1080" height="140" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">2. INCOMING MESSAGE HANDLING — RECEIVE</text>
+    <text x="24" y="64" class="body">META WHATSAPP WEBHOOK TRIGGERS BACKEND ENDPOINT WHICH RECORDS METADATA.</text>
+    <text x="24" y="94" class="tech">META WHATSAPP CLOUD API · EXPRESS.JS · FIREBASE FUNCTIONS</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#f59e0b"/>
+    <text x="938" y="44" class="badge">WEBHOOK</text>
+  </g>
+
+  <!-- 3 Message Storage -->
+  <g transform="translate(60,480)">
+    <rect x="0" y="0" width="1080" height="140" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">3. MESSAGE STORAGE — LOG CONVERSATIONS</text>
+    <text x="24" y="64" class="body">PERSIST INCOMING/OUTGOING MESSAGES AND CONTEXT FOR THREADING &amp; ANALYTICS.</text>
+    <text x="24" y="94" class="tech">FIREBASE FIRESTORE</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#10b981"/>
+    <text x="940" y="44" class="badge">DB</text>
+  </g>
+
+  <!-- 4 AI Response Generation -->
+  <g transform="translate(60,640)">
+    <rect x="0" y="0" width="1080" height="170" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">4. AI RESPONSE GENERATION — TEXT</text>
+    <text x="24" y="64" class="body">FORWARD CONVERSATION + CONTEXT TO GPT FOR HUMAN-LIKE REPLIES AND INTENT UNDERSTANDING.</text>
+    <text x="24" y="98" class="tech">OPENAI GPT-4O / GPT-4O-MINI API · PROMPT TEMPLATES</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#7c3aed"/>
+    <text x="940" y="44" class="badge">LLM</text>
+  </g>
+
+  <!-- 5 Send Reply -->
+  <g transform="translate(60,830)">
+    <rect x="0" y="0" width="1080" height="130" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">5. SEND REPLY TO USER — DISPATCH</text>
+    <text x="24" y="64" class="body">SEND GENERATED AI REPLY BACK VIA WHATSAPP MESSAGES ENDPOINT.</text>
+    <text x="24" y="94" class="tech">META WHATSAPP CLOUD API · /MESSAGES ENDPOINT</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#ef4444"/>
+    <text x="940" y="44" class="badge">OUT</text>
+  </g>
+
+  <!-- 6 Categorization -->
+  <g transform="translate(60,980)">
+    <rect x="0" y="0" width="1080" height="130" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">6. CATEGORIZATION LAYER</text>
+    <text x="24" y="64" class="body">CLASSIFY MESSAGE INTENT (INQUIRY/ORDER/COMPLAINT) FOR DASHBOARD TAGGING.</text>
+    <text x="24" y="94" class="tech">OPENAI GPT-4O CLASSIFICATION PROMPTS · FIREBASE CLOUD FUNCTIONS</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#06b6d4"/>
+    <text x="940" y="44" class="badge">TAG</text>
+  </g>
+
+  <!-- 7 Reminders -->
+  <g transform="translate(60,1130)">
+    <rect x="0" y="0" width="1080" height="120" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">7. REMINDERS &amp; FOLLOW-UPS</text>
+    <text x="24" y="64" class="body">SCHEDULED CHECKS FOR UNRESOLVED MESSAGES; NOTIFY OWNERS OF PENDING CHATS.</text>
+    <text x="24" y="94" class="tech">FIREBASE SCHEDULED FUNCTIONS · CLOUD SCHEDULER</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#f97316"/>
+    <text x="940" y="44" class="badge">CRON</text>
+  </g>
+
+  <!-- 8 Voice Support -->
+  <g transform="translate(60,1260)">
+    <rect x="0" y="0" width="1080" height="150" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">8. VOICE SUPPORT</text>
+    <text x="24" y="64" class="body">TRANSCRIBE VOICE NOTES AND FEED TRANSCRIPTION TO LLM FOR REPLIES.</text>
+    <text x="24" y="98" class="tech">OPENAI WHISPER API · FIREBASE STORAGE</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#60a5fa"/>
+    <text x="940" y="44" class="badge">AUDIO</text>
+  </g>
+
+  <!-- 9 Image Processing -->
+  <g transform="translate(60,1430)">
+    <rect x="0" y="0" width="1080" height="150" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">9. IMAGE PROCESSING (OPTIONAL)</text>
+    <text x="24" y="64" class="body">DETECT/DESCRIBE PRODUCT IMAGES OR GENERATE VISUALS IF NEEDED.</text>
+    <text x="24" y="98" class="tech">GPT-4O IMAGE INPUT / DALL·E API</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#8b5cf6"/>
+    <text x="940" y="44" class="badge">VISION</text>
+  </g>
+
+  <!-- 10 Dashboard -->
+  <g transform="translate(60,1600)">
+    <rect x="0" y="0" width="1080" height="160" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">10. DASHBOARD VIEW</text>
+    <text x="24" y="64" class="body">REAL-TIME STREAMS OF CATEGORIZED LOGS, REMINDERS AND AI METRICS.</text>
+    <text x="24" y="98" class="tech">REACT NATIVE / FLUTTER · FIRESTORE STREAMS · CHARTS.JS</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#0ea5a4"/>
+    <text x="940" y="44" class="badge">UI</text>
+  </g>
+
+  <!-- 11 Local Language -->
+  <g transform="translate(60,1770)">
+    <rect x="0" y="0" width="1080" height="130" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">11. LOCAL LANGUAGE FEATURE</text>
+    <text x="24" y="64" class="body">AUTO-DETECT VERNACULAR &amp; TRANSLATE/GENERATE LOCALIZED RESPONSES.</text>
+    <text x="24" y="94" class="tech">OPENAI MULTILINGUAL PROMPTS · GOOGLE TRANSLATE API</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#34d399"/>
+    <text x="940" y="44" class="badge">I18N</text>
+  </g>
+
+  <!-- 12 Analytics -->
+  <g transform="translate(60,1920)">
+    <rect x="0" y="0" width="1080" height="130" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">12. ANALYTICS LAYER (OPTIONAL)</text>
+    <text x="24" y="64" class="body">COMPUTE RESPONSE TIMES, MISSED REPLIES, DAILY COUNTS &amp; TRENDS.</text>
+    <text x="24" y="94" class="tech">FIREBASE FUNCTIONS · CHARTS.JS</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#f472b6"/>
+    <text x="940" y="44" class="badge">METRICS</text>
+  </g>
+
+  <!-- 13 Security -->
+  <g transform="translate(60,2070)">
+    <rect x="0" y="0" width="1080" height="130" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">13. SYSTEM SECURITY</text>
+    <text x="24" y="64" class="body">AUTH, TOKENS AND RULES TO SECURE FIREBASE AND APIS.</text>
+    <text x="24" y="94" class="tech">FIREBASE AUTH · HTTPS RULES · TOKEN-BASED ACCESS</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#ef4444"/>
+    <text x="940" y="44" class="badge">SEC</text>
+  </g>
+
+  <!-- 14 Demo & Deploy -->
+  <g transform="translate(60,2220)">
+    <rect x="0" y="0" width="1080" height="140" class="box" filter="url(#shadow)"/>
+    <text x="24" y="34" class="title">14. DEMO &amp; DEPLOYMENT</text>
+    <text x="24" y="64" class="body">HOST BACKEND, RUN LIVE DEMO FOR THE BUILDATHON.</text>
+    <text x="24" y="94" class="tech">FIREBASE HOSTING · RAILWAY · RENDER · NGROK</text>
+    <rect x="920" y="22" width="120" height="32" rx="8" fill="#06b6d4"/>
+    <text x="940" y="44" class="badge">DEPLOY</text>
+  </g>
+
+  <!-- Final flow -->
+  <g transform="translate(60,2380)">
+    <text x="24" y="28" class="title">FINAL OUTPUT FLOW</text>
+    <text x="24" y="58" class="body">USER → WHATSAPP → META API WEBHOOK → BIZZWA BACKEND → GPT → WHATSAPP REPLY → DASHBOARD &amp; ANALYTICS</text>
+  </g>
+
+  <!-- Vertical arrows -->
+  <path d="M600 290 L600 320" class="arrow"/>
+  <path d="M600 450 L600 480" class="arrow"/>
+  <path d="M600 610 L600 640" class="arrow"/>
+  <path d="M600 790 L600 830" class="arrow"/>
+  <path d="M600 950 L600 980" class="arrow"/>
+  <path d="M600 1100 L600 1130" class="arrow"/>
+  <path d="M600 1240 L600 1260" class="arrow"/>
+  <path d="M600 1410 L600 1430" class="arrow"/>
+  <path d="M600 1580 L600 1600" class="arrow"/>
+  <path d="M600 1750 L600 1770" class="arrow"/>
+  <path d="M600 1900 L600 1920" class="arrow"/>
+  <path d="M600 2050 L600 2070" class="arrow"/>
+  <path d="M600 2200 L600 2220" class="arrow"/>
+  <text x="40" y="3380" class="tech">Generated: BIZZWA workflow diagram • APIs/Tech in ALL CAPS</text>
+</svg>
