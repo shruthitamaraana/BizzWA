@@ -1,5 +1,6 @@
 BizzWA - AI-Powered WhatsApp CRM for Indian SMBs
-![BizzWA Dashboard](assets/bizzwa-dashboard.png)
+![BizzWA Dashboard](https://github.com/shruthitamaraana/BizzWA/blob/main/assests/bizzwa-dashboard.png?raw=true)
+
 
 
 BizzWA is a smart, simple, and powerful AI-driven CRM designed specifically for Small and Medium Businesses (SMBs) in India who use WhatsApp as their primary channel for customer communication. It transforms a cluttered WhatsApp inbox into an organized, efficient, and intelligent sales and support hub.
