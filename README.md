@@ -11,7 +11,7 @@ Millions of businesses in India rely on WhatsApp to connect with their customers
 
 Delayed Responses: Manually tracking hundreds of chats leads to slow replies and lost sales opportunities.
 
-Missed Messages: Important inquiries or complaints get buried, leading to customer frustration and a loss of trust.
+Missed Messages: Important inquiries or complaints get buried, leading to customer frustration and a loss of trust. 
 
 Impersonal Communication: Standard chatbots feel rigid and fail to build the personal relationships that are a competitive advantage for SMBs.
 
